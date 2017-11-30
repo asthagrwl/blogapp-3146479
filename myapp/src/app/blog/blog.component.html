@@ -1,0 +1,42 @@
+<div class="container row">
+  <div class="col s12 m6">
+    <div class="card  darken-1">
+      <div class="card-content ">
+        <span class="card-title">Card Title</span>
+        <app-list-detail [widgets]="items" (deleteOnClick)="deleteWidget($event)" (editOnClick)="updateData($event)" ></app-list-detail>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <div class="card  darken-1">
+      <div class="card-content ">
+        <span class="card-title">Card Title</span>
+        <div class="row">
+          <form class="col s12" >
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Title" #title id="tt" type="text" class="validate">
+              </div>
+              <div class="input-field col s12">
+                <input placeholder="Name" #name id="nm" type="text" class="validate">
+              </div>
+              <div>
+                <select name="catagory">
+                  <option value="A">Technology</option>
+                  <option value="B">Management</option>
+                  <option value="C">Medical</option>
+                </select>
+              </div>
+              <div class="input-field col s6">
+                <input #desc placeholder="Description" id="desc" type="text" class="validate">
+              </div>
+            </div>
+          </form>
+          <button class="center waves-effect waves-light-btn" id="edit" (click)="addWidget(title.value,name.value,desc.value)">Add</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

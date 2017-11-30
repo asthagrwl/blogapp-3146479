@@ -1,0 +1,9 @@
+<div class="collection">
+  <a *ngFor="let widget of widgets" class="collection-item">
+    <h4 style="font-size: inherit;"><b>{{widget.title}}</b></h4>
+    <h6 ><i>-{{widget.name}}</i></h6>
+    <h6 >{{widget.desc}}</h6>
+    <button  (click)="OnClick(widget.id)">Delete</button>
+    <button  (click)="edit(widget)">Update</button>
+  </a>
+</div>
